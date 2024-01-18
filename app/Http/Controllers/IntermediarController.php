@@ -4,10 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\intermediar;
 use Illuminate\Http\Request;
+
 use GuzzleHttp\Client;
-
 use Illuminate\Support\Facades\Http;
-
 
 class IntermediarController extends Controller
 {
@@ -58,4 +57,5 @@ class IntermediarController extends Controller
 		$response = $client->request('GET', 'posts');
 		return json_decode($response->getBody()->getContents());
 	}
+
 }
