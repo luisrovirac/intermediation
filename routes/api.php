@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\http\Controllers\IntermediarController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,3 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('consumeapidemo', [IntermediarController::class, 'consumeapidemo']);
+
