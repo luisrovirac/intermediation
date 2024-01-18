@@ -54,7 +54,7 @@ class IntermediarController extends Controller
 		$client = new Client([
 			'base_uri' => 'https://jsonplaceholder.typicode.com',
 		]);
-		$response = $client->request('GET', 'posts');
+		$response = $client->request('GET', 'users/1', ['verify' => false]);
 		return json_decode($response->getBody()->getContents());
 	}
 
